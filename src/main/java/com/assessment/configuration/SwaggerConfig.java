@@ -30,7 +30,7 @@ public class SwaggerConfig {
     }
 
     private List<SecurityReference> sf(){
-        AuthorizationScope scope = new AuthorizationScope("global","access everything");
+        AuthorizationScope scope = new AuthorizationScope(ConstantUtility.GLOBAL,"access everything");
         return Arrays.asList(new SecurityReference("JWT",new AuthorizationScope[]{scope}));
     }
     @Bean
