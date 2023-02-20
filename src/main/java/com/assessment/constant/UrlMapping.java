@@ -4,7 +4,6 @@ public class UrlMapping {
 
 
     // Company URL
-
     public static final String BASE_URL = "api/v1";
     public static final String COMPANY = BASE_URL+"/company";
 
