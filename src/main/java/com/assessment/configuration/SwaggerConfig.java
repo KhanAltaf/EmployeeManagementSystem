@@ -1,5 +1,6 @@
 package com.assessment.configuration;
 
+import com.assessment.constant.ConstantUtility;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -18,10 +19,10 @@ import java.util.List;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    public static final String AUTHORIZATION_HEADER = "Authorization";
+    public static final String AUTHORIZATION_HEADER = ConstantUtility.AUTHORIZATION;
 
     private ApiKey apiKey(){
-        return new ApiKey("JWT",AUTHORIZATION_HEADER,"header");
+        return new ApiKey(ConstantUtility.JWT,AUTHORIZATION_HEADER,ConstantUtility.HEADER);
     }
 
     private List<SecurityContext> securityContexts(){
